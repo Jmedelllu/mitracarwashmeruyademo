@@ -32,7 +32,9 @@ Kredensial default ada di `gold/config.php` dan `diamond/config.php`. **Wajib di
 
 ## Push ke GitHub
 
-Setelah repo kosong dibuat di GitHub (mis. `mitracarwashmeruyawebsite`):
+Repo GitHub contoh: [mitracarwashmeruyademo](https://github.com/Jmedelllu/mitracarwashmeruyademo).
+
+**Setup awal (clone baru atau folder belum ada Git):**
 
 ```bash
 cd c:\xampp\htdocs\Bisinis
@@ -40,11 +42,21 @@ git init
 git add .
 git commit -m "Initial commit: Mitra Car Wash demo (Premium, Gold, Diamond)"
 git branch -M main
-git remote add origin https://github.com/Jmedelllu/mitracarwashmeruyawebsite.git
+git remote add origin https://github.com/Jmedelllu/mitracarwashmeruyademo.git
 git push -u origin main
 ```
 
-Ganti `Jmedelllu` / nama repo jika berbeda. Jika GitHub meminta login, gunakan **Personal Access Token** sebagai password (HTTPS) atau SSH remote.
+**Sudah ada commit lokal, hanya ganti remote:**
+
+```bash
+cd c:\xampp\htdocs\Bisinis
+git remote set-url origin https://github.com/Jmedelllu/mitracarwashmeruyademo.git
+git push -u origin main
+```
+
+> Jika di GitHub Anda sudah pernah push README minimal dari folder lain dan riwayatnya beda dengan project ini, push pertama bisa memakai `git push -u origin main --force` (menimpa isi branch `main` di remote). Hati-hati jika remote sudah berisi pekerjaan penting.
+
+Ganti `Jmedelllu` / nama repo jika berbeda. Untuk HTTPS, gunakan **Personal Access Token** sebagai password (bukan password akun), atau pakai **SSH**.
 
 ## Catatan keamanan
 
