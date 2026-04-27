@@ -1,0 +1,24 @@
+# OS / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.log
+
+# Data aplikasi (jangan commit isi DB / inquiry / booking dari mesin lokal)
+**/storage/*.sqlite
+**/storage/*.json
+
+# Tetap izinkan penanda folder kosong
+!**/.gitkeep
+
+# PHP (jika nanti pakai Composer)
+/vendor/
+
+# Env lokal (jika nanti dipakai)
+.env
+.env.*
